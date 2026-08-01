@@ -94,7 +94,11 @@ body{font-family:'Red Hat Display',sans-serif;background:#f0f2fa;color:#1a1a2e;}
   .sc-bar-track{background:#eef1fb;border-radius:999px;height:7px;position:relative;overflow:hidden;}
   .sc-bar-fill{height:100%;border-radius:999px;}
   .sc-bar-ref{position:absolute;left:83.33%;top:-2px;bottom:-2px;width:2px;background:#092872;opacity:0.2;}
-  .sc-owner{font-size:10px;color:#b0b0c8;margin-top:10px;}
+  .sc-owner{font-size:10px;color:#b0b0c8;margin-top:8px;}
+  .sc-gap{font-size:11px;color:#6a6a88;font-weight:300;margin-top:10px;line-height:1.4;}
+  .sc-gap b{color:#1a1a2e;font-weight:700;}
+  .sc-gap.sc-ok{color:#2ba81a;}
+  .sc-gap.sc-ok b{color:#2ba81a;}
   @media(max-width:900px){.sc-grid{grid-template-columns:repeat(2,1fr);}}
   @media(max-width:500px){.sc-grid{grid-template-columns:1fr;}}
 
@@ -370,16 +374,15 @@ body{font-family:'Red Hat Display',sans-serif;background:#f0f2fa;color:#1a1a2e;}
   <div class="shdr"><div class="pill bl">Scorecard acumulado · Enero–Julio 2026</div><div class="sline"></div></div>
   <p style="font-size:13px;color:#6a6a88;font-weight:300;margin:-10px 0 22px;line-height:1.5;">
     Ejecución acumulada enero–julio frente al presupuesto anual prorateado a 7 meses.
-    <span style="display:inline-flex;align-items:center;gap:16px;margin-left:8px;">
-      <span style="display:inline-flex;align-items:center;gap:6px;"><span style="width:12px;height:12px;border-radius:50%;background:#2ba81a;display:inline-block;"></span>≥ 95%</span>
-      <span style="display:inline-flex;align-items:center;gap:6px;"><span style="width:12px;height:12px;border-radius:50%;background:#c98f00;display:inline-block;"></span>85–94%</span>
-      <span style="display:inline-flex;align-items:center;gap:6px;"><span style="width:12px;height:12px;border-radius:50%;background:#c05050;display:inline-block;"></span>&lt; 85%</span>
+    <span style="display:inline-flex;align-items:center;gap:16px;margin-left:8px;flex-wrap:wrap;">
+      <span style="display:inline-flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:50%;background:#2ba81a;display:inline-block;"></span><span style="font-size:12px;">≥ 100% · meta cumplida</span></span>
+      <span style="display:inline-flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:50%;background:#c98f00;display:inline-block;"></span><span style="font-size:12px;">80–99% · en seguimiento</span></span>
+      <span style="display:inline-flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:50%;background:#c05050;display:inline-block;"></span><span style="font-size:12px;">&lt; 80% · por recuperar</span></span>
     </span>
   </p>
 
   <div class="sc-grid">
 
-    <!-- COLOCACIÓN -->
     <div class="sc-card">
       <div class="sc-top">
         <div class="sc-dot" style="background:#c98f00"></div>
@@ -388,10 +391,10 @@ body{font-family:'Red Hat Display',sans-serif;background:#f0f2fa;color:#1a1a2e;}
       </div>
       <div class="sc-val">$2,124 B</div>
       <div class="sc-bar-track"><div class="sc-bar-fill" style="width:76.6%;background:#c98f00"></div><div class="sc-bar-ref"></div></div>
+      <div class="sc-gap">Faltan <b>$187,4 B</b> para llegar a la meta anual</div>
       <div class="sc-owner">Mercadeo</div>
     </div>
 
-    <!-- CRÉDITOS -->
     <div class="sc-card">
       <div class="sc-top">
         <div class="sc-dot" style="background:#c98f00"></div>
@@ -400,10 +403,10 @@ body{font-family:'Red Hat Display',sans-serif;background:#f0f2fa;color:#1a1a2e;}
       </div>
       <div class="sc-val">7.272.072</div>
       <div class="sc-bar-track"><div class="sc-bar-fill" style="width:75.1%;background:#c98f00"></div><div class="sc-bar-ref"></div></div>
+      <div class="sc-gap">Faltan <b>800.000 créditos</b> para llegar a la meta anual</div>
       <div class="sc-owner">Mercadeo</div>
     </div>
 
-    <!-- TICKET PROMEDIO -->
     <div class="sc-card">
       <div class="sc-top">
         <div class="sc-dot" style="background:#2ba81a"></div>
@@ -412,10 +415,10 @@ body{font-family:'Red Hat Display',sans-serif;background:#f0f2fa;color:#1a1a2e;}
       </div>
       <div class="sc-val">$292.475</div>
       <div class="sc-bar-track"><div class="sc-bar-fill" style="width:83.33%;background:#2ba81a"></div><div class="sc-bar-ref"></div></div>
+      <div class="sc-gap sc-ok">Meta superada en <b>$5.746 por crédito</b></div>
       <div class="sc-owner">Mercadeo</div>
     </div>
 
-    <!-- RECAUDO -->
     <div class="sc-card">
       <div class="sc-top">
         <div class="sc-dot" style="background:#2ba81a"></div>
@@ -424,10 +427,10 @@ body{font-family:'Red Hat Display',sans-serif;background:#f0f2fa;color:#1a1a2e;}
       </div>
       <div class="sc-val">$2,622 B</div>
       <div class="sc-bar-track"><div class="sc-bar-fill" style="width:83.33%;background:#2ba81a"></div><div class="sc-bar-ref"></div></div>
+      <div class="sc-gap sc-ok">Meta superada en <b>$175,1 B</b></div>
       <div class="sc-owner">Cartera</div>
     </div>
 
-    <!-- ALMACENES CREADOS -->
     <div class="sc-card">
       <div class="sc-top">
         <div class="sc-dot" style="background:#c05050"></div>
@@ -436,22 +439,10 @@ body{font-family:'Red Hat Display',sans-serif;background:#f0f2fa;color:#1a1a2e;}
       </div>
       <div class="sc-val">25.749</div>
       <div class="sc-bar-track"><div class="sc-bar-fill" style="width:64.9%;background:#c05050"></div><div class="sc-bar-ref"></div></div>
+      <div class="sc-gap">Faltan <b>7.309 almacenes</b> para llegar a la meta anual</div>
       <div class="sc-owner">Mercadeo</div>
     </div>
 
-    <!-- ALMACENES PRIMER CRÉDITO -->
-    <div class="sc-card">
-      <div class="sc-top">
-        <div class="sc-dot" style="background:#8a8aaa"></div>
-        <div class="sc-name">Alm. primer crédito</div>
-        <div class="sc-pct" style="color:#8a8aaa">—</div>
-      </div>
-      <div class="sc-val">13.874</div>
-      <div class="sc-bar-track"><div class="sc-bar-fill" style="width:0%;background:#8a8aaa"></div><div class="sc-bar-ref"></div></div>
-      <div class="sc-owner">Mercadeo · sin ppto</div>
-    </div>
-
-    <!-- SOLICITANTES -->
     <div class="sc-card">
       <div class="sc-top">
         <div class="sc-dot" style="background:#c05050"></div>
@@ -460,22 +451,22 @@ body{font-family:'Red Hat Display',sans-serif;background:#f0f2fa;color:#1a1a2e;}
       </div>
       <div class="sc-val">1.057.282</div>
       <div class="sc-bar-track"><div class="sc-bar-fill" style="width:61.5%;background:#c05050"></div><div class="sc-bar-ref"></div></div>
+      <div class="sc-gap">Faltan <b>376.320 solicitantes</b> para llegar a la meta anual</div>
       <div class="sc-owner">Mercadeo</div>
     </div>
 
-    <!-- APROBADOS -->
     <div class="sc-card">
       <div class="sc-top">
-        <div class="sc-dot" style="background:#c05050"></div>
+        <div class="sc-dot" style="background:#c98f00"></div>
         <div class="sc-name">Aprobados</div>
-        <div class="sc-pct" style="color:#c05050">81,8%</div>
+        <div class="sc-pct" style="color:#b07800">81,8%</div>
       </div>
       <div class="sc-val">469.135</div>
-      <div class="sc-bar-track"><div class="sc-bar-fill" style="width:68.2%;background:#c05050"></div><div class="sc-bar-ref"></div></div>
+      <div class="sc-bar-track"><div class="sc-bar-fill" style="width:68.2%;background:#c98f00"></div><div class="sc-bar-ref"></div></div>
+      <div class="sc-gap">Faltan <b>104.309 aprobados</b> para llegar a la meta anual</div>
       <div class="sc-owner">Riesgo Crédito</div>
     </div>
 
-    <!-- % APROBACIÓN -->
     <div class="sc-card">
       <div class="sc-top">
         <div class="sc-dot" style="background:#2ba81a"></div>
@@ -484,31 +475,8 @@ body{font-family:'Red Hat Display',sans-serif;background:#f0f2fa;color:#1a1a2e;}
       </div>
       <div class="sc-val">44,4%</div>
       <div class="sc-bar-track"><div class="sc-bar-fill" style="width:83.33%;background:#2ba81a"></div><div class="sc-bar-ref"></div></div>
+      <div class="sc-gap sc-ok">Meta superada en <b>4,4 pp</b></div>
       <div class="sc-owner">Riesgo Crédito</div>
-    </div>
-
-    <!-- CLIENTES USO CUPO -->
-    <div class="sc-card">
-      <div class="sc-top">
-        <div class="sc-dot" style="background:#8a8aaa"></div>
-        <div class="sc-name">Clientes uso cupo</div>
-        <div class="sc-pct" style="color:#8a8aaa">—</div>
-      </div>
-      <div class="sc-val">2.065.935</div>
-      <div class="sc-bar-track"><div class="sc-bar-fill" style="width:0%;background:#8a8aaa"></div><div class="sc-bar-ref"></div></div>
-      <div class="sc-owner">Mercadeo · sin ppto</div>
-    </div>
-
-    <!-- CLIENTES NUEVOS USO CUPO -->
-    <div class="sc-card">
-      <div class="sc-top">
-        <div class="sc-dot" style="background:#8a8aaa"></div>
-        <div class="sc-name">Clientes nuevos cupo</div>
-        <div class="sc-pct" style="color:#8a8aaa">—</div>
-      </div>
-      <div class="sc-val">136.209</div>
-      <div class="sc-bar-track"><div class="sc-bar-fill" style="width:0%;background:#8a8aaa"></div><div class="sc-bar-ref"></div></div>
-      <div class="sc-owner">Mercadeo · sin ppto</div>
     </div>
 
   </div><!-- /sc-grid -->
